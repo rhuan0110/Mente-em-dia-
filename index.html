@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#214f3e">
+  <meta name="description" content="Mente em Dia — um espaço de autopercepção, autocuidado e caminhos de apoio para estudantes universitários.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Mente em Dia · Saúde e bem-estar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="intro-overlay" id="introOverlay" aria-label="Abertura Mente em Dia">
+  <video class="intro-video" id="introVideo" autoplay muted playsinline preload="auto">
+    <source src="intro-mente-em-dia.mp4" type="video/mp4">
+  </video>
+  <button class="intro-skip" id="introSkip" type="button">Pular introdução →</button>
+</div>
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Mente em Dia - início" onclick="navigate('home');return false">
+      <div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 52 52" fill="none"><path d="M26 44S7 33.8 7 20.5C7 12.8 16.4 8.5 22 15c1.1 1.3 2.1 2.9 4 5 1.9-2.1 2.9-3.7 4-5 5.6-6.5 15-2.2 15 5.5C45 33.8 26 44 26 44Z" stroke="#285b45" stroke-width="2.4" stroke-linejoin="round"/><path d="M26 17c-4-5-11-2.6-11 3.2 0 3.4 2.2 5.1 4.8 6.8-1 4.2 2.2 8 6.2 7.6 4 .4 7.2-3.4 6.2-7.6 2.6-1.7 4.8-3.4 4.8-6.8 0-5.8-7-8.2-11-3.2Z" stroke="#285b45" stroke-width="1.8"/><path d="M26 19v13M19.8 24.5c2.6 0 4.2 1.1 6.2 3.2m6.2-3.2c-2.6 0-4.2 1.1-6.2 3.2" stroke="#285b45" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <div><div class="brand-name">Mente <span>em Dia</span></div><div class="brand-sub">saúde & bem-estar</div></div>
+    </a>
+    <div class="brand-partner" aria-label="FMU Tech Level Up"><span class="brand-partner-divider"></span><img src="fmu-tech-verde.png" alt="FMU Tech Level Up" class="fmu-tech-logo"></div>
+    <div class="top-actions"><div class="ods-pill">ODS 3 · SAÚDE E BEM-ESTAR</div><button class="profile-chip" onclick="navigate('more')" aria-label="Abrir menu"><span class="avatar" id="topAvatar">♡</span><span id="topName">Meu espaço</span></button></div>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar">
+      <div class="side-caption">Seu espaço</div>
+      <nav class="nav-list" aria-label="Navegação principal">
+        <button class="nav-btn active" data-screen="home" onclick="navigate('home')"><span class="nav-icon">⌂</span>Início</button>
+        <button class="nav-btn" data-screen="checkin" onclick="navigate('checkin')"><span class="nav-icon">☻</span>Check-in</button>
+        <button class="nav-btn" data-screen="diary" onclick="navigate('diary')"><span class="nav-icon">▤</span>Diário emocional</button>
+        <button class="nav-btn" data-screen="map" onclick="navigate('map')"><span class="nav-icon">⌁</span>Meu mapa</button>
+        <button class="nav-btn" data-screen="care" onclick="navigate('care')"><span class="nav-icon">❀</span>Autocuidado</button>
+        <button class="nav-btn" data-screen="support" onclick="navigate('support')"><span class="nav-icon">♡</span>Rede de apoio</button>
+        <button class="nav-btn" data-screen="more" onclick="navigate('more')"><span class="nav-icon">☰</span>Mais</button>
+      </nav>
+      <div class="side-note"><strong>Cuide de você no seu ritmo.</strong>Não existe uma forma perfeita de se sentir. Este espaço é seu, sem cobranças e sem julgamentos.</div>
+    </aside>
+    <main>
+      <section class="screen active" id="screen-home">
+        <div class="hero">
+          <div class="hero-copy"><div class="eyebrow">Seu espaço de cuidado</div><h1 id="greeting">Olá! Como você está?</h1><p>Pequenas pausas para perceber como você está se sentindo também fazem parte da jornada universitária.</p><button class="btn btn-primary" onclick="navigate('checkin')">♡ Fazer check-in <span>→</span></button></div>
+          <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M252 218c6-51-2-94-27-130m25 53c24-22 34-42 37-68m-41 90c-25-8-42-22-55-45" stroke="#77956e" stroke-width="3" stroke-linecap="round"/><path d="M256 119c-23-17-40-15-46-4 14 19 29 21 46 4Zm-8-31c-2-26 9-42 25-42 5 19-4 34-25 42Zm24 56c20-18 39-19 48-6-13 18-29 21-48 6Z" fill="#9caf8e"/><path d="M65 218c4-42 1-66-12-91m12 51C39 160 26 145 24 128m43 25c22-18 29-35 27-51" stroke="#78956c" stroke-width="3" stroke-linecap="round"/><path d="M65 162c-21-2-32-13-31-27 20 0 31 10 31 27Zm-4-32c-1-19 7-31 20-31 4 15-3 26-20 31Zm20 13c16-15 30-15 36-4-10 14-23 17-36 4Z" fill="#a8bb98"/><path d="M156 91c-20 0-39 13-43 32-3 17 8 28 25 31l-5 19 22-13c24 2 43-10 46-29 3-21-16-40-45-40Z" fill="#f1c49e"/><path d="M119 126c-7-24 7-48 31-51 13-2 24 4 30 16 14 4 24 18 22 34-1 11-8 19-19 25-1-16-9-23-19-29-13 11-28 13-45 5Z" fill="#51402f"/><path d="M139 131c2 3 5 3 7 0m19 0c2 3 5 3 7 0m-20 17c6 4 13 4 19 0" stroke="#543c2f" stroke-width="2" stroke-linecap="round"/><path d="M132 176c-13 6-23 21-28 42h117c-4-27-18-43-40-46l-18 16-31-12Z" fill="#5d896a"/><path d="M137 177c12 14 26 21 40 18l-10-22" fill="#719a76"/><path d="M116 203c-11-8-16-17-16-28m-8 26c-9-14-9-28-4-38" stroke="#71956b" stroke-width="3" stroke-linecap="round"/><path d="M75 65c9-17 27-21 39-11 8 7 8 17 1 24-8 7-19 8-31 3-8-3-13-8-9-16Z" stroke="#6d8d65" stroke-width="2"/><path d="M83 65c5-5 11-7 18-5" stroke="#6d8d65" stroke-width="2" stroke-linecap="round"/><path d="M230 43c8-9 22-2 20 9-1 7-10 14-20 20-10-6-19-13-20-20-2-11 12-18 20-9Z" fill="#fffdf6" stroke="#78946d" stroke-width="2"/></svg></div>
+        </div>
+        <div class="checkin-prompt"><div class="prompt-left"><div class="prompt-icon">☀</div><div><strong id="todayStatus">Como você chega hoje?</strong><span id="todaySub">Um registro rápido leva menos de 1 minuto.</span></div></div><button class="btn btn-soft btn-small" onclick="navigate('checkin')" id="todayButton">Registrar agora →</button></div>
+        <div class="section-heading"><div><h2>Seu resumo da semana</h2><p>Um panorama dos seus próprios registros.</p></div><span class="tiny-pill">SEUS DADOS</span></div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-top"><span>Registros</span><span class="stat-symbol">▤</span></div><div class="stat-value" id="statEntries">0</div><div class="stat-foot">check-ins realizados</div></div>
+          <div class="stat-card"><div class="stat-top"><span>Estresse médio</span><span class="stat-symbol" style="background:#f7e5cf">≈</span></div><div class="stat-value" id="statStress">—</div><div class="stat-foot">últimos 7 registros</div></div>
+          <div class="stat-card"><div class="stat-top"><span>Sono médio</span><span class="stat-symbol">☾</span></div><div class="stat-value" id="statSleep">—</div><div class="stat-foot">últimos 7 registros</div></div>
+        </div>
+        <div class="section-heading"><div><h2>Radar de atenção</h2><p>Pequenos sinais para observar com gentileza.</p></div><button class="btn btn-white btn-small" onclick="navigate('map')">Ver mapa →</button></div>
+        <div id="homeRadar"></div>
+        <div class="section-heading"><div><h2>Evolução emocional</h2><p>O gráfico mostra somente os registros informados.</p></div><button class="btn btn-white btn-small" onclick="navigate('map')">Detalhes →</button></div>
+        <div class="two-col"><div class="panel chart-panel"><div class="panel-title"><div><h3>Estresse nos últimos dias</h3><p>Escala autorrelatada de 0 a 10</p></div><span class="tiny-pill">PESSOAL</span></div><div id="homeChart" class="chart-wrap"></div><div class="chart-legend"><span><i class="legend-dot"></i>Estresse</span></div></div><div class="insight-panel"><div class="insight-kicker">✿ Dica gentil</div><h3 id="insightTitle">Seus registros contam uma história, no seu tempo.</h3><p id="insightText">Comece com um check-in. Com alguns registros, você poderá observar tendências da sua própria rotina.</p><span class="insight-foot">Sem diagnóstico · Sem comparações</span></div></div>
+        <div class="section-heading"><div><h2>Pequenas atitudes fazem diferença</h2><p>Escolha o que fizer sentido para agora.</p></div></div>
+        <div class="quick-grid"><button class="quick-card" onclick="navigate('care')"><span class="quick-emoji">🌿</span><strong>Exercício de respiração</strong><span>Relaxe por um momento.</span></button><button class="quick-card" onclick="navigate('care')"><span class="quick-emoji">☕</span><strong>Pausa consciente</strong><span>Desacelere a rotina.</span></button><button class="quick-card" onclick="navigate('support')"><span class="quick-emoji">🤝</span><strong>Encontrar apoio</strong><span>Você não está só.</span></button></div>
+      </section>
+
+      <section class="screen" id="screen-checkin">
+        <div class="page-head"><div class="eyebrow">01 / perceber</div><h1>Check-in</h1><p class="subtle">Como você está se sentindo hoje? Não existe resposta certa. Responda apenas o que quiser.</p></div>
+        <form class="panel form-panel" id="checkinForm">
+          <div class="form-intro"><div><h3 style="margin:0">Seu momento de hoje</h3><div class="subtle" style="font-size:9px">Você pode pular qualquer pergunta.</div></div><div class="date-label" id="checkinDate"></div></div>
+          <div class="feeling-title">Como está seu humor?</div>
+          <div class="feelings-grid" id="checkinFeelings">
+            <button type="button" class="feeling-btn" data-score="0" onclick="selectMood(0)"><span class="face">😞</span><span>Muito difícil</span></button>
+            <button type="button" class="feeling-btn" data-score="3" onclick="selectMood(3)"><span class="face">😟</span><span>Triste</span></button>
+            <button type="button" class="feeling-btn selected" data-score="5" onclick="selectMood(5)"><span class="face">😐</span><span>Regular</span></button>
+            <button type="button" class="feeling-btn" data-score="7" onclick="selectMood(7)"><span class="face">🙂</span><span>Bem</span></button>
+            <button type="button" class="feeling-btn" data-score="10" onclick="selectMood(10)"><span class="face">😄</span><span>Muito bem</span></button>
+          </div>
+          <label class="skip-line"><input type="checkbox" id="skipMood"> Prefiro não responder sobre meu humor</label>
+          <div class="metric-grid">
+            <div class="metric-card"><div class="metric-head"><label for="stress">🫧 Nível de estresse</label><output class="metric-value" id="stressValue">5</output></div><div class="metric-help">Quanto de pressão você sente?</div><input type="range" id="stress" min="0" max="10" value="5"><div class="range-scale"><span>0 · Tranquilo</span><span>10 · Muito alto</span></div><label class="skip-line"><input type="checkbox" id="skipStress"> Prefiro não responder</label></div>
+            <div class="metric-card"><div class="metric-head"><label for="sleep">🌙 Qualidade do sono</label><output class="metric-value" id="sleepValue">5</output></div><div class="metric-help">Como foi seu descanso?</div><input type="range" id="sleep" min="0" max="10" value="5"><div class="range-scale"><span>0 · Não descansei</span><span>10 · Reparador</span></div><label class="skip-line"><input type="checkbox" id="skipSleep"> Prefiro não responder</label></div>
+            <div class="metric-card"><div class="metric-head"><label for="energy">⚡ Disposição</label><output class="metric-value" id="energyValue">5</output></div><div class="metric-help">Como está sua energia?</div><input type="range" id="energy" min="0" max="10" value="5"><div class="range-scale"><span>0 · Sem energia</span><span>10 · Muita energia</span></div><label class="skip-line"><input type="checkbox" id="skipEnergy"> Prefiro não responder</label></div>
+          </div>
+          <label class="field-label" for="observation">Algo que gostaria de registrar? <span style="font-weight:500;color:var(--muted)">(opcional)</span></label><textarea id="observation" maxlength="500" placeholder="Ex.: semana de provas, dormi mais tarde... Evite inserir nomes ou informações que identifiquem outras pessoas."></textarea>
+          <div class="form-foot"><span class="hint">Os dados ficam neste dispositivo nesta versão. Um check-in por dia; você pode atualizar o registro de hoje.</span><button class="btn btn-primary" type="submit">✓ Salvar registro</button></div>
+          <div class="notice">O Mente em Dia é uma ferramenta de autopercepção e informação. Não realiza diagnóstico e não substitui atendimento profissional.</div>
+        </form>
+      </section>
+
+      <section class="screen" id="screen-diary">
+        <div class="page-head"><div class="eyebrow">02 / expressar</div><h1>Diário emocional</h1><p class="subtle">Um espaço privado para compartilhar o que sente e organizar pensamentos. Escreva apenas o que for confortável.</p></div>
+        <div class="diary-card">
+          <div class="diary-intro-art"><svg class="diary-book" viewBox="0 0 80 90" fill="none" aria-hidden="true"><path d="M13 12c0-4 4-7 8-7h44v72H21c-4 0-8 3-8 7V12Z" fill="#fffdf6" stroke="#426d50" stroke-width="2.5"/><path d="M21 5v72m-8 7c0-4 4-7 8-7h44" stroke="#426d50" stroke-width="2.5"/><path d="M43 30c-6-8-17-3-15 6 1 6 9 12 16 17 7-5 15-11 16-17 2-9-9-14-17-6Z" fill="#d9e4d0" stroke="#426d50" stroke-width="2"/></svg><div><div class="eyebrow">SEU ESPAÇO DE ESCUTA</div><h3 style="margin:0">O que está passando pela sua cabeça?</h3><span class="subtle" style="font-size:9px">Sem julgamentos. Sem respostas certas.</span></div></div>
+          <div class="feeling-title">Como você está se sentindo agora?</div>
+          <div class="feelings-grid" id="journalFeelings">
+            <button type="button" class="feeling-btn selected" data-jfeel="Bem" onclick="selectJournalFeeling('Bem','🙂',7)"><span class="face">🙂</span><span>Bem</span></button>
+            <button type="button" class="feeling-btn" data-jfeel="Regular" onclick="selectJournalFeeling('Regular','😐',5)"><span class="face">😐</span><span>Regular</span></button>
+            <button type="button" class="feeling-btn" data-jfeel="Triste" onclick="selectJournalFeeling('Triste','😢',3)"><span class="face">😢</span><span>Triste</span></button>
+            <button type="button" class="feeling-btn" data-jfeel="Ansioso" onclick="selectJournalFeeling('Ansioso','😟',3)"><span class="face">😟</span><span>Ansioso</span></button>
+            <button type="button" class="feeling-btn" data-jfeel="Muito mal" onclick="selectJournalFeeling('Muito mal','😣',0)"><span class="face">😣</span><span>Muito mal</span></button>
+          </div>
+          <label class="field-label" for="journalText">O que aconteceu ou o que você gostaria de colocar para fora?</label>
+          <textarea id="journalText" maxlength="1200" placeholder="Escreva sobre seu dia, seus sentimentos ou algo que esteja ocupando seus pensamentos..."></textarea>
+          <div class="field-label">Motivo principal <span style="font-weight:500;color:var(--muted)">(opcional)</span></div>
+          <div class="motive-list" id="motiveList"><button type="button" class="motive-chip" data-motive="Faculdade" onclick="toggleMotive(this)">Faculdade</button><button type="button" class="motive-chip" data-motive="Trabalho" onclick="toggleMotive(this)">Trabalho</button><button type="button" class="motive-chip" data-motive="Família" onclick="toggleMotive(this)">Família</button><button type="button" class="motive-chip" data-motive="Relacionamento" onclick="toggleMotive(this)">Relacionamento</button><button type="button" class="motive-chip" data-motive="Saúde" onclick="toggleMotive(this)">Saúde</button><button type="button" class="motive-chip" data-motive="Outro" onclick="toggleMotive(this)">Outro</button></div>
+          <div class="form-foot"><span class="hint">Seu diário fica salvo localmente neste dispositivo. Evite escrever dados que identifiquem outras pessoas.</span><button class="btn btn-primary" type="button" onclick="saveJournal()">▣ Salvar no diário</button></div>
+        </div>
+        <div class="section-heading"><div><h2>Seus registros</h2><p>Somente você pode consultar estes registros neste dispositivo.</p></div><span class="tiny-pill" id="journalCount">0 REGISTROS</span></div>
+        <div id="journalHistory" class="journal-list"></div>
+        <div class="notice">O diário é um espaço de expressão pessoal. Ele não é monitorado por profissionais e não substitui conversa com alguém de confiança ou atendimento de saúde.</div>
+      </section>
+
+      <section class="screen" id="screen-map">
+        <div class="page-head"><div class="eyebrow">03 / observar</div><h1>Meu mapa</h1><p class="subtle">Acompanhe tendências nos seus próprios registros. O mapa não compara você com outras pessoas e não atribui diagnósticos.</p></div>
+        <div class="period-tabs" role="group" aria-label="Período do gráfico"><button class="period-tab active" data-period="7" onclick="setPeriod(7)">7 dias</button><button class="period-tab" data-period="30" onclick="setPeriod(30)">30 dias</button><button class="period-tab" data-period="90" onclick="setPeriod(90)">3 meses</button></div>
+        <div class="demo-banner" id="demoBanner">EXEMPLO ILUSTRATIVO · Valores fictícios para demonstrar o mapa. Não foram salvos e não representam estudantes reais.</div>
+        <div class="panel">
+          <div class="panel-title"><div><h3>Evolução emocional</h3><p>Estresse, sono e disposição · escala autorrelatada de 0 a 10</p></div><span class="tiny-pill" id="mapPeriodLabel">7 DIAS</span></div>
+          <div id="mapChart" class="chart-wrap"></div>
+          <div class="chart-legend"><span><i class="legend-dot"></i>Estresse</span><span><i class="legend-dot mint"></i>Sono</span><span><i class="legend-dot peach"></i>Disposição</span></div>
+          <div class="map-summary"><div class="map-kpi"><span>MÉDIA DE ESTRESSE</span><strong id="mapStress">—</strong></div><div class="map-kpi"><span>MÉDIA DE SONO</span><strong id="mapSleep">—</strong></div><div class="map-kpi"><span>REGISTROS</span><strong id="mapCount">0</strong></div></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:13px"><button class="btn btn-white btn-small" onclick="toggleDemo()" id="demoToggle">Ver exemplo ilustrativo</button><button class="btn btn-soft btn-small" onclick="navigate('checkin')">Novo check-in +</button></div>
+        </div>
+        <div class="section-heading"><div><h2>Radar de atenção</h2><p>Indícios repetidos nos próprios registros recentes.</p></div></div><div id="mapRadar"></div>
+        <div class="section-heading"><div><h2>Histórico pessoal</h2><p>Seus check-ins organizados por data.</p></div></div><div id="historyList" class="history-list"></div>
+        <div class="notice">Regra demonstrativa: o radar destaca uma faixa quando ela aparece em pelo menos 2 dos últimos 7 check-ins. Os sinais são apenas descrições de respostas autorrelatadas, não são escalas clínicas, não fazem triagem e não indicam diagnóstico.</div>
+      </section>
+
+      <section class="screen" id="screen-care">
+        <div class="page-head"><div class="eyebrow">04 / acolher</div><h1>Autocuidado possível</h1><p class="subtle">Pequenas atitudes podem ajudar a criar pausas na rotina. Escolha uma opção realista para o momento.</p></div>
+        <div class="care-grid">
+          <article class="care-card"><div class="care-emoji">🌬️</div><h3>Exercício de respiração</h3><p>Acompanhe uma respiração confortável, sem forçar o ritmo. Você pode parar quando quiser.</p><button class="btn btn-soft btn-small" onclick="startBreathing()">Começar pausa →</button></article>
+          <article class="care-card"><div class="care-emoji">☕</div><h3>Pausa consciente</h3><p>Afaste-se da tela por alguns instantes, beba água ou observe o ambiente ao seu redor.</p><button class="btn btn-white btn-small" onclick="showToast('Experimente fazer uma pausa curta, sem cobrança.')">Ver sugestão</button></article>
+          <article class="care-card"><div class="care-emoji">🌙</div><h3>Cuide do descanso</h3><p>Experimente preparar o ambiente para dormir e reduzir estímulos antes de deitar.</p><button class="btn btn-white btn-small" onclick="showToast('Uma rotina simples e possível pode ajudar a preparar o momento de descanso.')">Dica de sono</button></article>
+          <article class="care-card"><div class="care-emoji">🗒️</div><h3>Organize sua rotina</h3><p>Escolha até três prioridades e transforme a primeira em um próximo passo pequeno.</p><button class="btn btn-white btn-small" onclick="showToast('Comece por uma tarefa pequena. O restante pode esperar.')">Ver sugestão</button></article>
+        </div>
+        <div class="breath-panel"><div class="breath-orb-wrap"><div class="breath-orb" id="breathOrb">Pausa</div></div><div class="breath-copy"><div class="eyebrow">EXERCÍCIO OPCIONAL · 1 MINUTO</div><h3 id="breathTitle">Respire no seu próprio ritmo.</h3><p id="breathText">Quando estiver pronto, inicie um ciclo guiado: inspire por 4 segundos e solte o ar por 6 segundos. Se causar desconforto, pare e respire normalmente.</p><button class="btn btn-primary btn-small" id="breathButton" onclick="startBreathing()">Iniciar exercício</button></div></div>
+        <div class="notice">As sugestões são gerais e opcionais. Cada pessoa tem necessidades diferentes; não se force a realizar uma atividade que cause desconforto.</div>
+      </section>
+
+      <section class="screen" id="screen-support">
+        <div class="page-head"><div class="eyebrow">05 / encontrar caminhos</div><h1>Você não precisa passar por isso sozinho(a).</h1><p class="subtle">Conheça alguns caminhos de acolhimento. Buscar apoio é uma atitude de cuidado.</p></div>
+        <div class="support-grid">
+          <article class="support-card featured"><div class="eyebrow" style="color:#c6d9c6">APOIO EMOCIONAL</div><h2>CVV · 188</h2><div class="support-number">188</div><p>Conversa gratuita e sigilosa, 24 horas por dia, todos os dias.</p><div class="support-links"><a class="btn btn-white btn-small" href="tel:188">Ligar para o CVV</a><a class="btn btn-soft btn-small" href="https://cvv.org.br/" target="_blank" rel="noopener">Site e chat ↗</a></div></article>
+          <article class="support-card"><div class="eyebrow">REDE PÚBLICA · SUS</div><h2>UBS e CAPS</h2><p>As Unidades Básicas de Saúde podem acolher e orientar. Os Centros de Atenção Psicossocial oferecem cuidado especializado em saúde mental.</p><div class="support-links"><a class="btn btn-soft btn-small" href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps/caps/caps/" target="_blank" rel="noopener">Conhecer CAPS ↗</a><a class="btn btn-white btn-small" href="https://www.google.com/maps/search/?api=1&query=UBS+CAPS+perto+de+mim" target="_blank" rel="noopener">Buscar perto ↗</a></div></article>
+        </div>
+        <div class="emergency"><strong>⚠ Precisa de atendimento imediato?</strong><p>Em situação de risco imediato, procure uma UPA, pronto-socorro ou hospital, ou acione o SAMU pelo número 192. Sempre que possível, peça apoio a alguém de confiança.</p><a class="btn btn-danger btn-small" href="tel:192">Ligar para o SAMU · 192</a></div>
+        <div class="notice">O Mente em Dia não monitora situações de emergência nem substitui serviços de saúde. Os canais e endereços devem ser conferidos em fontes oficiais antes da publicação.</div>
+      </section>
+
+      <section class="screen" id="screen-more">
+        <div class="page-head"><div class="eyebrow">06 / seu espaço</div><h1>Mais</h1><p class="subtle">Acesse recursos de cuidado, apoio e configurações da sua experiência.</p></div>
+        <div class="more-profile"><div class="more-avatar">♡</div><div><strong id="moreName">Seu espaço pessoal</strong><span>Seus dados ficam neste dispositivo nesta versão.</span></div></div>
+        <div class="menu-grid">
+          <button class="menu-item" onclick="navigate('care')"><span class="menu-symbol">🌿</span><span><strong>Autocuidado</strong><span>Respiração, pausas e rotina</span></span></button>
+          <button class="menu-item" onclick="navigate('support')"><span class="menu-symbol">🤝</span><span><strong>Rede de apoio</strong><span>CVV, UBS e CAPS</span></span></button>
+          <button class="menu-item" onclick="navigate('support')"><span class="menu-symbol">☎</span><span><strong>Apoio imediato</strong><span>Orientações e emergência</span></span></button>
+          <button class="menu-item" onclick="document.getElementById('settingsArea').scrollIntoView({behavior:'smooth'})"><span class="menu-symbol">⚙</span><span><strong>Configurações</strong><span>Perfil e privacidade</span></span></button>
+        </div>
+        <div class="section-heading" id="settingsArea"><div><h2>Configurações e privacidade</h2><p>Você controla os registros que salva.</p></div></div>
+        <div class="settings-grid">
+          <div class="setting-card"><h3>Seu perfil</h3><p>Use um apelido ou deixe o campo em branco.</p><input id="nicknameInput" type="text" maxlength="24" placeholder="Como gostaria de ser chamado?"><button class="btn btn-primary btn-small" onclick="saveNickname()">Salvar apelido</button></div>
+          <div class="setting-card"><h3>Seus dados</h3><p>Exporte uma cópia dos seus check-ins e do diário emocional.</p><button class="btn btn-soft btn-small" onclick="exportData()">Exportar meus dados ↓</button></div>
+          <div class="setting-card"><h3>Excluir registros</h3><p>Apague check-ins e diário salvos neste navegador. Esta ação não pode ser desfeita.</p><button class="btn btn-danger btn-small" onclick="openDeleteModal()">Excluir meus dados</button></div>
+          <div class="setting-card"><h3>Sobre o aplicativo</h3><p>Protótipo acadêmico da FMU, alinhado ao ODS 3 — Saúde e Bem-Estar.</p><span class="tiny-pill">PROTÓTIPO ACADÊMICO</span></div>
+        </div>
+        <div class="section-heading"><div><h2>O projeto Mente em Dia</h2><p>O que orienta o desenvolvimento da proposta.</p></div></div>
+        <div class="project-grid">
+          <div class="project-item"><strong>Problema</strong><p>Estudantes podem ter dificuldade para perceber sinais persistentes de sobrecarga e saber onde buscar apoio.</p></div>
+          <div class="project-item"><strong>Público-alvo</strong><p>Estudantes universitários. O protótipo é uma ferramenta de acompanhamento pessoal e prevenção.</p></div>
+          <div class="project-item"><strong>Solução proposta</strong><p>Check-in diário, diário emocional, histórico, mapa de tendências, autocuidado e rede de apoio.</p></div>
+          <div class="project-item"><strong>Diferencial responsável</strong><p>Observa os registros do próprio usuário, sem comparar pessoas ou emitir diagnóstico.</p></div>
+          <div class="project-item"><strong>Base pública</strong><p>PNS 2019/IBGE como contexto nacional; os resultados não representam especificamente universitários.</p></div>
+          <div class="project-item"><strong>Validação planejada</strong><p>Questionário anônimo com estudantes e teste de clareza, facilidade e utilidade do protótipo.</p></div>
+        </div>
+        <div class="section-heading"><div><h2>Fontes e informações</h2><p>Referências públicas para aprofundar o tema.</p></div></div>
+        <div class="panel" style="margin-bottom:12px"><p class="privacy-copy"><strong style="color:var(--forest)">Base pública sugerida:</strong> a Pesquisa Nacional de Saúde (PNS 2019), do IBGE, disponibiliza tabelas e microdados públicos sobre condições de saúde e utilização de serviços. É uma referência nacional de contexto, não uma pesquisa específica com universitários. A proposta prevê também pesquisa anônima e voluntária com estudantes.</p>
+          <div class="source-list" style="margin-top:12px"><a class="source-row" href="https://www.ibge.gov.br/estatisticas/sociais/saude/9160-pesquisa-nacional-de-saude.html" target="_blank" rel="noopener"><div><strong>IBGE · Pesquisa Nacional de Saúde</strong><span>Tabelas, documentação e microdados públicos</span></div><span class="source-arrow">↗</span></a><a class="source-row" href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/suicidio-prevencao/suicidio-prevencao" target="_blank" rel="noopener"><div><strong>Ministério da Saúde · Prevenção</strong><span>Orientações oficiais e caminhos de ajuda</span></div><span class="source-arrow">↗</span></a><a class="source-row" href="https://cvv.org.br/ligue-188-3/" target="_blank" rel="noopener"><div><strong>CVV · Ligue 188</strong><span>Informações oficiais sobre atendimento</span></div><span class="source-arrow">↗</span></a></div>
+        </div>
+        <div class="panel"><h3>Privacidade: o que esta versão faz e não faz</h3><p class="privacy-copy">Esta demonstração armazena dados no armazenamento local do navegador, que não é criptografado automaticamente. Não use informações que identifiquem você ou terceiros. Para o APK, a equipe deve integrar o banco SQLite documentado, proteger o arquivo e o dispositivo, avaliar criptografia, implementar controle de acesso e testar a exclusão dos registros. O uso de SQLite, sozinho, não garante segurança.</p></div>
+      </section>
+      <p class="footer-note">MENTE EM DIA · FMU TECH INOVAÇÃO 2026.2 · ODS 3 — SAÚDE E BEM-ESTAR<br>Protótipo acadêmico para prevenção, autopercepção e acesso à informação.</p>
+    </main>
+  </div>
+</div>
+<nav class="bottom-nav" aria-label="Navegação inferior">
+  <button class="nav-btn active" data-screen="home" onclick="navigate('home')"><span class="nav-icon">⌂</span>Início</button>
+  <button class="nav-btn" data-screen="checkin" onclick="navigate('checkin')"><span class="nav-icon">☻</span>Check-in</button>
+  <button class="nav-btn" data-screen="diary" onclick="navigate('diary')"><span class="nav-icon">▤</span>Diário</button>
+  <button class="nav-btn" data-screen="map" onclick="navigate('map')"><span class="nav-icon">⌁</span>Meu mapa</button>
+  <button class="nav-btn" data-screen="more" onclick="navigate('more')"><span class="nav-icon">☰</span>Mais</button>
+</nav>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+  <div class="welcome-card"><div class="welcome-logo">♡</div><div class="eyebrow">BEM-VINDO(A) AO SEU ESPAÇO</div><h2 id="welcomeTitle">Cuidar de si também faz parte da jornada.</h2><p>O Mente em Dia ajuda você a registrar como se sente, observar suas próprias tendências e encontrar caminhos de apoio.</p><label for="welcomeNickname">Como podemos chamar você? <span style="color:var(--muted);font-weight:500">(opcional)</span></label><input id="welcomeNickname" type="text" maxlength="24" placeholder="Seu apelido">
+  <label class="consent-row"><input type="checkbox" id="welcomeConsent"><span>Entendo que este é um protótipo de apoio e autopercepção, não um serviço de diagnóstico ou emergência. Concordo em salvar meus registros apenas neste dispositivo nesta versão.</span></label>
+  <button class="btn btn-primary" id="welcomeStart" onclick="acceptWelcome()" disabled>Começar meu espaço →</button><p style="font-size:9px;margin:12px 0 0;text-align:center">Você pode consultar e excluir seus registros a qualquer momento.</p></div>
+</div>
+<div class="modal" id="deleteModal" role="dialog" aria-modal="true" aria-labelledby="deleteTitle"><div class="modal-card"><div class="eyebrow">PRIVACIDADE</div><h2 id="deleteTitle">Excluir todos os registros?</h2><p>Todos os check-ins e entradas do diário emocional deste dispositivo serão apagados permanentemente. Seu apelido e a configuração de boas-vindas serão mantidos.</p><div class="modal-actions"><button class="btn btn-white btn-small" onclick="closeDeleteModal()">Cancelar</button><button class="btn btn-danger btn-small" onclick="confirmDelete()">Sim, excluir</button></div></div></div>
+<script src="script.js" defer></script>
+</body>
+</html>

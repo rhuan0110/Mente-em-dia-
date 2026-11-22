@@ -1,0 +1,12 @@
+MENTE EM DIA — INSTRUÇÕES PARA EXECUÇÃO
+
+1. Instale o Node.js (versão LTS atual).
+2. Abra esta pasta no VS Code.
+3. No terminal, execute: node server.js
+4. Mantenha o terminal aberto.
+5. Acesse: http://localhost:3000
+
+Alternativa no Windows: execute INICIAR_MENTE_EM_DIA.bat.
+O servidor apenas disponibiliza os arquivos do site. Os dados são gravados
+no localStorage do navegador; não há SQLite, API de banco de dados ou sincronização.
+Para encerrar, pressione Ctrl+C no terminal.

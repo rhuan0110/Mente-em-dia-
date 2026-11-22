@@ -1,0 +1,32 @@
+MENTE EM DIA — FMU TECH
+INSTRUÇÕES DE EXECUÇÃO
+
+Esta versão NÃO utiliza SQLite nem qualquer banco de dados no servidor.
+Os dados do perfil, check-ins e diário emocional são salvos no armazenamento
+local do navegador (localStorage).
+
+1. Instale o Node.js (versão LTS atual).
+2. Extraia a pasta do projeto.
+3. Abra a pasta no VS Code e inicie um terminal nela.
+4. Execute: node server.js
+   Ou dê dois cliques em INICIAR_MENTE_EM_DIA.bat (Windows).
+5. Acesse: http://localhost:3000
+
+O servidor Node.js serve apenas os arquivos do site. Não existe conexão
+com banco de dados, API de persistência ou dependência externa.
+
+ARMAZENAMENTO E PRIVACIDADE
+- Os dados permanecem no navegador e no perfil de usuário deste dispositivo.
+- Não são enviados para servidor nem sincronizados entre dispositivos.
+- Limpar os dados do site/navegador pode apagar os registros.
+- Usar outro navegador, outro perfil ou outro endereço de acesso pode mostrar
+  um armazenamento separado.
+- Use a opção de exportação do aplicativo para baixar uma cópia JSON dos dados.
+- Evite registrar informações que identifiquem outras pessoas.
+- Para apagar os dados, use a opção de exclusão dentro do aplicativo ou
+  limpe os dados locais do site no navegador.
+
+IMPORTANTE
+O localStorage não é um banco de dados centralizado e não oferece backup
+automático. Esta é uma versão acadêmica local, sem login e sem sincronização.
+O Mente em Dia não realiza diagnóstico e não substitui atendimento profissional.
